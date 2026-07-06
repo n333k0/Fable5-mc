@@ -7,28 +7,28 @@
 import { BLOCKS, PALETTE } from './blocks.js';
 
 const SPLASHES = [
-  'Now in JavaScript!',
-  'Three.js powered!',
-  '100% procedural pixels!',
-  'Punch the TNT!',
-  'Double-tap SPACE to fly!',
-  'Infinite-ish terrain!',
-  'No assets were harmed!',
-  'Caves included!',
-  'Also try the real one!',
-  'Made of canvas!',
-  'Sneak near edges!',
-  'Watch for falling sand!',
+  'The seed is watching!',
+  'A screenshot became a biome!',
+  'You are the missing chunk!',
+  'Double-tap SPACE to leave the feed!',
+  'Infinite terrain, finite attention!',
+  'The cave has push notifications!',
+  'LocalStorage knows your old coordinates!',
+  'Crops are low-poly omens!',
+  'The skybox is a witness!',
+  'Bedrock dreams in JPEG!',
+  'CTRL sprint from the algorithm!',
+  'A torch is just a small confession!',
 ];
 
 const TIPS = [
-  'Tip: Double-tap SPACE to fly',
-  'Tip: Hold CTRL (or double-tap W) to sprint',
-  'Tip: Press E to choose any block',
-  'Tip: TNT explodes when you break it…',
-  'Tip: Torches light up caves',
-  'Tip: Middle-click copies the block you aim at',
-  'Tip: SHIFT-sneaking stops you falling off edges',
+  'Tip: Double-tap SPACE to leave the timeline',
+  'Tip: Hold CTRL when the feed starts chasing you',
+  'Tip: Press E to open the material hallucination grid',
+  'Tip: TNT is loud because the map is insecure',
+  'Tip: Torches make caves admit things',
+  'Tip: Middle-click copies the block that copied you',
+  'Tip: SHIFT-sneaking keeps the void from recommending you',
 ];
 
 export class UI {
@@ -114,14 +114,14 @@ export class UI {
     this.$('opt-fov').value = s.fov; this.$('val-fov').textContent = s.fov;
     this.$('opt-sens').value = s.sens; this.$('val-sens').textContent = s.sens;
     this.$('opt-vol').value = s.vol; this.$('val-vol').textContent = s.vol;
-    this.$('opt-bob').textContent = `View Bobbing: ${s.bob ? 'ON' : 'OFF'}`;
-    this.$('opt-clouds').textContent = `Clouds: ${s.clouds ? 'ON' : 'OFF'}`;
-    this.$('opt-music').textContent = `Music: ${s.music ? 'ON' : 'OFF'}`;
+    this.$('opt-bob').textContent = `Body Drift: ${s.bob ? 'ON' : 'OFF'}`;
+    this.$('opt-clouds').textContent = `Sky Noise: ${s.clouds ? 'ON' : 'OFF'}`;
+    this.$('opt-music').textContent = `Ambient Loop: ${s.music ? 'ON' : 'OFF'}`;
     this.$('opt-smooth').textContent = `Smooth Lighting: ${s.smooth ? 'ON' : 'OFF'}`;
   }
 
   setSeedPlaceholder(seed) {
-    this.$('seed-input').placeholder = `Seed (current: ${seed})`;
+    this.$('seed-input').placeholder = `Current omen: ${seed}`;
   }
 
   setLoadingProgress(frac) {
